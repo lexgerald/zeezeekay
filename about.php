@@ -10,7 +10,7 @@ require_once 'includes/navbar.php';
     <div class="row mb-5">
         <div class="col-12 text-center">
             <h1 class="display-4 fw-bold">About Zeekay Products</h1>
-            <div class="divider mx-auto" style="width: 80px; height: 4px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 2px;"></div>
+            <div class="divider mx-auto" style="width: 80px; height: 4px; background: linear-gradient(135deg, #667eea, #324eec); border-radius: 2px;"></div>
             <p class="text-muted mt-3 fs-5">Your trusted partner for quality products</p>
         </div>
     </div>
