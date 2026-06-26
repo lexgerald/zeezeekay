@@ -1,0 +1,58 @@
+/* assets/css/checkout.css - Checkout Styles */
+.checkout-container {
+    padding: 2rem 0;
+}
+
+.order-summary-card {
+    border-radius: 16px;
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+}
+
+.order-summary-card .list-group-item {
+    background: transparent;
+    border-color: #dee2e6;
+}
+
+.payment-method-card {
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method-card:hover {
+    border-color: #0d6efd;
+    background: #f8f9fa;
+}
+
+.payment-method-card.selected {
+    border-color: #0d6efd;
+    background: #e7f1ff;
+}
+
+.payment-method-card .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.success-animation {
+    animation: successPulse 1s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.failed-animation {
+    animation: failedShake 0.5s ease;
+}
+
+@keyframes failedShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}

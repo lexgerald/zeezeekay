@@ -1,0 +1,178 @@
+2026-06-25 01:37:21 - Payment Request: {"transaction_id":"ZK-14-1782344241-6a3c6a312cabf","amount":"1500.00","currency":"USD","description":"Zeekay Store Order","callback_url":"http:\/\/localhost\/zeekay-store\/api\/monime-webhook.php","success_url":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=14&transaction_id=ZK-14-1782344241-6a3c6a312cabf","cancel_url":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=14","metadata":{"order_id":"14","user_id":"2","test_mode":true}}
+2026-06-25 01:37:22 - HTTP Code: 404
+2026-06-25 01:37:22 - Response Headers: HTTP/2 404 
+date: Wed, 24 Jun 2026 23:37:22 GMT
+content-type: text/plain
+content-length: 0
+monime-request-duration: 29
+monime-request-id: req-k6SEjy8yDBg9q5i7hxuhGskS76hw
+monime-request-timestamp: 2026-06-24T23:37:22Z
+server: cloudflare
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TP3PZ5VX9IfW9tHk4s7r7r8QV077nbGu99C7Yh%2BTYy%2FX8p3FWfmzIzQHfzba0GIU8wIfWRrMH5vJT2igWVF%2FiBD2DUNRXhkmQvTIl2aRg4SK0aM4XWb%2FE3LcUo6zBAOm"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-ray: a10f8f57b915b2d1-LIS
+alt-svc: h3=":443"; ma=86400
+
+
+2026-06-25 01:37:22 - Response Body: 
+2026-06-25 01:37:22 - JSON Parse Error: Syntax error
+2026-06-25 01:49:23 - Payment Request: {"transaction_id":"ZK-15-1782344963-6a3c6d03eac85","amount":"1500.00","currency":"USD","description":"Zeekay Store Order","callback_url":"http:\/\/localhost\/zeekay-store\/api\/monime-webhook.php","success_url":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=15&transaction_id=ZK-15-1782344963-6a3c6d03eac85","cancel_url":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=15","metadata":{"order_id":"15","user_id":"2","test_mode":true}}
+2026-06-25 01:49:24 - HTTP Code: 404
+2026-06-25 01:49:24 - Response Headers: HTTP/2 404 
+date: Wed, 24 Jun 2026 23:49:24 GMT
+content-type: text/plain
+content-length: 0
+monime-request-duration: 25
+monime-request-id: req-k6SEktKtyjssPNsppdJPNiarZQJw
+monime-request-timestamp: 2026-06-24T23:49:24Z
+server: cloudflare
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=VNTh8Xo%2FGpeU6s5XQOsL80f5d%2BmQwo8CcK7iifj1rmANABEv7ZuKHJS3ibKVoADTB%2Bkm%2Bc%2BOMFTEUal9zz2IE9emFDr2CbzD7Gig0%2F01p%2FiOF%2BsdIuENg7hk0PNgTnq2"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-ray: a10fa0fdec0848ab-LIS
+alt-svc: h3=":443"; ma=86400
+
+
+2026-06-25 01:49:24 - Response Body: 
+2026-06-25 01:49:24 - JSON Parse Error: Syntax error
+2026-06-25 01:52:56 - Payment Request: {"transaction_id":"ZK-16-1782345176-6a3c6dd84e2b3","amount":"1500.00","currency":"USD","description":"Zeekay Store Order","callback_url":"http:\/\/localhost\/zeekay-store\/api\/monime-webhook.php","success_url":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=16&transaction_id=ZK-16-1782345176-6a3c6dd84e2b3","cancel_url":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=16","metadata":{"order_id":"16","user_id":"2","test_mode":true}}
+2026-06-25 01:52:57 - HTTP Code: 404
+2026-06-25 01:52:57 - Response Headers: HTTP/2 404 
+date: Wed, 24 Jun 2026 23:52:57 GMT
+content-type: text/plain
+content-length: 0
+monime-request-duration: 28
+monime-request-id: req-k6SEm9wvyZW7hC3ykTr7jKNWgCWw
+monime-request-timestamp: 2026-06-24T23:52:57Z
+server: cloudflare
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=jeClnxRrgl1ExvXd0ONdTi%2BgzyGY%2BnlJ2IqugMRhmsRs%2BnaH9jOpy5LR4KWJ2vM9fVget2yrEb1sq3%2FwXbrR2OtM95kzaD1bmyLgUtWCjic7mQz6NcgZHpd%2B3YlrXlZn"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-ray: a10fa62c7ec8ab0d-LIS
+alt-svc: h3=":443"; ma=86400
+
+
+2026-06-25 01:52:57 - Response Body: 
+2026-06-25 01:52:57 - JSON Parse Error: Syntax error
+2026-06-25 02:00:43 - Checkout Request: {"name":"Zeekay Store Order","description":"Order #17 - Zeekay Store","lineItems":[{"name":"Order #17","amount":14999,"quantity":1,"currency":"SLE"}],"successUrl":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=17","cancelUrl":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=17","reference":"17","metadata":{"order_id":"17","user_id":"2"}}
+2026-06-25 02:00:44 - HTTP Code: 401
+2026-06-25 02:00:44 - Response: {"success":false,"messages":[],"error":{"code":401,"reason":"not_authenticated","message":"The request is missing a valid Authorization header. The token may be absent, or expired. See https://docs.monime.io/apis/authentication.","details":[]}}
+2026-06-25 02:19:25 - Checkout Request: {"name":"Zeekay Store Order","description":"Order #18 - Zeekay Store","lineItems":[{"name":"Order #18 - Zeekay Store","amount":150000,"quantity":1,"currency":"SLE"}],"successUrl":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=18","cancelUrl":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=18","reference":"18","metadata":{"order_id":"18","user_id":"2","test_mode":true}}
+2026-06-25 02:19:25 - Using Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:19:26 - HTTP Code: 403
+2026-06-25 02:19:26 - Response Headers: HTTP/2 403 
+date: Thu, 25 Jun 2026 00:19:26 GMT
+content-type: application/json; charset=utf-8
+content-length: 238
+monime-request-duration: 54
+monime-request-id: req-k6SEoAuB6ZquHdjG83wzrix6xHuw
+monime-request-timestamp: 2026-06-25T00:19:26Z
+server: cloudflare
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=N9hF3RoZu1obqg5tSYO40YCv%2FL6ESKEsUYZP3bU5EUWHgbRKOzDRtF5cbquwwaaoeLuxe4puKuGrb6G2r2pC84sZUYnX%2FctPZ3vxw3aXJyorZnwPHxVUSSInhSM3EErH"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-ray: a10fccf78f60eeea-LIS
+alt-svc: h3=":443"; ma=86400
+
+
+2026-06-25 02:19:26 - Response Body: {"success":false,"messages":[],"error":{"code":403,"reason":"access_denied","message":"Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.","details":[]}}
+2026-06-25 02:19:26 - ERROR: Array
+2026-06-25 02:22:37 - Monime initialized with Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:22:37 - Test Mode: Yes
+2026-06-25 02:22:37 - === NEW PAYMENT REQUEST ===
+2026-06-25 02:22:37 - Order ID: 999
+2026-06-25 02:22:37 - Amount: 10 SLE
+2026-06-25 02:22:37 - Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:22:37 - Payload: {"name":"Test Payment","description":"Order #999 - Zeekay Store","lineItems":[{"name":"Order #999 - Zeekay Store","amount":1000,"quantity":1,"currency":"SLE"}],"successUrl":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=999","cancelUrl":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=999","reference":"999","metadata":{"order_id":999,"user_id":"2","test_mode":true}}
+2026-06-25 02:22:38 - HTTP Code: 403
+2026-06-25 02:22:38 - Response Headers: HTTP/2 403 
+date: Thu, 25 Jun 2026 00:22:38 GMT
+content-type: application/json; charset=utf-8
+content-length: 238
+monime-request-duration: 44
+monime-request-id: req-k6SEoR3FT3Fdk5e1bwLFxGe16TMw
+monime-request-timestamp: 2026-06-25T00:22:38Z
+server: cloudflare
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fa9i91qbslSR9J%2FqWJovmN4gDGDW%2F8kvoQjAsNhcm8L2z8GwOEbtDsDnmXK%2F6KyQfs5zo3xlnxExO3IoEZnFx5gYcQXmOFUF9xetHKxc2qIll0CBV2PHmAKNmFIGtbHc"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-ray: a10fd1a83a3958fc-LIS
+alt-svc: h3=":443"; ma=86400
+
+
+2026-06-25 02:22:38 - Response Body: {"success":false,"messages":[],"error":{"code":403,"reason":"access_denied","message":"Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.","details":[]}}
+2026-06-25 02:22:38 - ERROR: Array
+2026-06-25 02:30:33 - === MONIME INITIALIZED ===
+2026-06-25 02:30:33 - Space ID: 'spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy'
+2026-06-25 02:30:33 - Token: 'mon_test_ySUtyWEN73...
+2026-06-25 02:30:33 - API Version: 'caph.2025-08-23'
+2026-06-25 02:30:33 - Test Mode: Yes
+2026-06-25 02:30:33 - === NEW PAYMENT REQUEST ===
+2026-06-25 02:30:33 - Order ID: 999
+2026-06-25 02:30:33 - Amount: 10 SLE
+2026-06-25 02:30:33 - Space ID: 'spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy'
+2026-06-25 02:30:33 - Payload: {"name":"Test Payment","description":"Order #999 - Zeekay Store","lineItems":[{"name":"Order #999 - Zeekay Store","amount":1000,"quantity":1,"currency":"SLE"}],"successUrl":"'http:\/\/localhost\/zeekay-store'\/checkout\/success.php?order_id=999","cancelUrl":"'http:\/\/localhost\/zeekay-store'\/checkout\/failed.php?order_id=999","reference":"999","metadata":{"order_id":999,"user_id":"2","test_mode":true}}
+2026-06-25 02:30:33 - HTTP Code: 0
+2026-06-25 02:30:33 - Response: 
+2026-06-25 02:30:33 - cURL Error: Could not resolve host: 'https
+2026-06-25 02:37:09 - === MONIME INITIALIZED ===
+2026-06-25 02:37:09 - Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:37:09 - Token: mon_test_ySUtyWEN73z...
+2026-06-25 02:37:09 - API Version: caph.2025-08-23
+2026-06-25 02:37:09 - Base URL: https://api.monime.io
+2026-06-25 02:37:09 - Test Mode: Yes
+2026-06-25 02:37:09 - === NEW PAYMENT REQUEST ===
+2026-06-25 02:37:09 - Order ID: 999
+2026-06-25 02:37:09 - Amount: 10 SLE
+2026-06-25 02:37:09 - Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:37:09 - Full URL: https://api.monime.io/v1/checkout-sessions
+2026-06-25 02:37:09 - Payload: {"name":"Test Payment","description":"Order #999 - Zeekay Store","lineItems":[{"name":"Order #999 - Zeekay Store","amount":1000,"quantity":1,"currency":"SLE"}],"successUrl":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=999","cancelUrl":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=999","reference":"999","metadata":{"order_id":999,"user_id":"2"}}
+2026-06-25 02:37:10 - HTTP Code: 403
+2026-06-25 02:37:10 - Response: {"success":false,"messages":[],"error":{"code":403,"reason":"access_denied","message":"Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.","details":[]}}
+2026-06-25 02:37:10 - ERROR: Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.
+2026-06-25 02:38:27 - === MONIME INITIALIZED ===
+2026-06-25 02:38:27 - Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:38:27 - Token: mon_test_ySUtyWEN73z...
+2026-06-25 02:38:27 - API Version: caph.2025-08-23
+2026-06-25 02:38:27 - Base URL: https://api.monime.io
+2026-06-25 02:38:27 - Test Mode: Yes
+2026-06-25 02:38:27 - === NEW PAYMENT REQUEST ===
+2026-06-25 02:38:27 - Order ID: 19
+2026-06-25 02:38:27 - Amount: 1500 SLE
+2026-06-25 02:38:27 - Space ID: spc-k6SEjUJsLDR1iHZnG9f6kHmPcEy
+2026-06-25 02:38:27 - Full URL: https://api.monime.io/v1/checkout-sessions
+2026-06-25 02:38:27 - Payload: {"name":"Zeekay Store Order","description":"Order #19 - Zeekay Store","lineItems":[{"name":"Order #19 - Zeekay Store","amount":150000,"quantity":1,"currency":"SLE"}],"successUrl":"http:\/\/localhost\/zeekay-store\/checkout\/success.php?order_id=19","cancelUrl":"http:\/\/localhost\/zeekay-store\/checkout\/failed.php?order_id=19","reference":"19","metadata":{"order_id":"19","user_id":"2"}}
+2026-06-25 02:38:27 - HTTP Code: 403
+2026-06-25 02:38:27 - Response: {"success":false,"messages":[],"error":{"code":403,"reason":"access_denied","message":"Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.","details":[]}}
+2026-06-25 02:38:27 - ERROR: Test mode is not supported for this endpoint: '/v1/checkout-sessions'. Please check your request path or consult the API documentation.
