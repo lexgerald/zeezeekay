@@ -132,7 +132,7 @@ require_once 'includes/navbar.php';
                         <div class="col-md-4 text-center mb-3">
                             <i class="bi bi-geo-alt" style="font-size: 2rem; color: #2225d6;"></i><br>
                             <strong>Address</strong><br>
-                            <a href="mailto:info@zeekay.com"
+                            <a href="#"
                                 style="color: #090909; text-decoration: none; opacity: 0.85; transition: opacity 0.3s;"
                                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
                                 #13 Commerce Street Freetown, Sierra Leone
