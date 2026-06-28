@@ -212,7 +212,6 @@ $slides = [
         </div>
     </div>-->
 </div>
-
 <style>
 /* Hero Slider Styles */
 .hero-slider {
