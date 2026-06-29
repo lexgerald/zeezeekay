@@ -119,7 +119,7 @@ $reference = 'ZK-' . time() . '-' . rand(1000, 9999);
                                         <i class="bi bi-phone"></i> Pay with Orange Money
                                     </button>
                                     <small class="text-muted d-block text-center mt-1">
-                                        <i class="bi bi-info-circle"></i> Dial *144# to complete payment
+                                        <i class="bi bi-info-circle"></i> Dial *144*4*1*276193# to complete payment
                                     </small>
                                 </div>
                             </div>
@@ -228,7 +228,7 @@ function processOrangeMoney(event) {
         if (data.success) {
             // Order placed successfully, now redirect to Orange Money
             alert('Order placed successfully! You will now be redirected to Orange Money.');
-            window.location.href = 'tel:*144*3567#';
+            window.location.href = 'tel:*144*4*1*276193#';
         } else {
             alert('Error placing order: ' + data.message);
             button.innerHTML = originalText;

@@ -83,7 +83,7 @@ require_once 'includes/navbar.php';
     <!-- What We Offer -->
     <div class="row mt-5">
         <div class="col-12">
-            <h2 class="text-center mb-4">Why Choose Zeekay Store?</h2>
+            <h2 class="text-center mb-4">Why Choose Zeekay?</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm text-center">
@@ -135,16 +135,16 @@ require_once 'includes/navbar.php';
                             <a href="#"
                                 style="color: #090909; text-decoration: none; opacity: 0.85; transition: opacity 0.3s;"
                                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-                                #13 Commerce Street Freetown, Sierra Leone
+                                Hamilton Junction No2 River Quarry Junction, Peninsular Hwy, Freetown
                             </a>
                         </div>
                         <div class="col-md-4 text-center mb-3">
                             <i class="bi bi-envelope" style="font-size: 2rem; color: #2225d6;"></i><br>
                             <strong>Email</strong><br>
-                            <a href="mailto:info@zeekay.com"
+                            <a href="mailto:info@zeezeekay.com"
                                 style="color: #090909; text-decoration: none; opacity: 0.85; transition: opacity 0.3s;"
                                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-                                info@zeekay.com
+                                info@zeezeekay.com
                             </a>
                         </div>
                         <div class="col-md-4 text-center mb-3">
@@ -172,11 +172,11 @@ require_once 'includes/navbar.php';
                         <div class="col-md-6">
                             <div class="d-flex justify-content-between border-bottom py-2">
                                 <span><strong>Monday - Friday</strong></span>
-                                <span>9:00 AM - 8:00 PM</span>
+                                <span>9:00 AM - 6:00 PM</span>
                             </div>
                             <div class="d-flex justify-content-between border-bottom py-2">
                                 <span><strong>Saturday</strong></span>
-                                <span>10:00 AM - 6:00 PM</span>
+                                <span>9:00 AM - 6:00 PM</span>
                             </div>
                             <div class="d-flex justify-content-between py-2">
                                 <span><strong>Sunday</strong></span>

@@ -25,8 +25,8 @@ $slides = [
     ],
     [
         'image' => '1782393686_6a3d2b5666225.png',
-        'title' => 'Monthly Sale!',
-        'subtitle' => 'Get up to 50% off on selected items. Limited time offer!',
+        'title' => 'Fair Pricing',
+        'subtitle' => 'We believe in quality. Every product is priced fairly for the value it delivers.',
         'btn_text' => 'Shop Now',
         'btn_link' => BASE_URL . 'products/index.php',
         'bg_color' => 'linear-gradient(135deg, #ea5c0f 0%, #ecb37f 100%)'
@@ -34,7 +34,7 @@ $slides = [
     [
         'image' => '1782393674_6a3d2b4a9174b.png',
         'title' => 'New Arrivals',
-        'subtitle' => 'Discover our latest collection of premium products.',
+        'subtitle' => 'Explore our latest collection of products.',
         'btn_text' => 'Explore',
         'btn_link' => BASE_URL . 'products/index.php',
         'bg_color' => 'linear-gradient(135deg, #4facfe 0%, #74ecf2 100%)'

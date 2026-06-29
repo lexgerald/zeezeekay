@@ -300,7 +300,7 @@ require_once 'includes/navbar.php';
                     <h3 class="fw-bold"><i class="bi bi-chat-dots"></i> Still Have Questions?</h3>
                     <p class="mb-4">We're here to help! Contact our support team for personalized assistance.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="mailto:support@zeezeekay.com" class="btn btn-light">
+                        <a href="mailto:info@zeezeekay.com" class="btn btn-light">
                             <i class="bi bi-envelope"></i> Email Us
                         </a>
                         <a href="tel:+23299999849" class="btn btn-outline-light">
