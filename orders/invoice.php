@@ -459,8 +459,13 @@ $deadlineFormatted = $deadline->format('F d, Y');
                         <div class="col-md-6">
                             <div class="company-name">Zeekay</div>
                             <div class="text-muted">
+<<<<<<< HEAD
                                 <i class="bi bi-geo-alt"></i> Hamilton Junction No2 River Quarry Junction, Peninsular Hwy, Freetown<br>
                                 <i class="bi bi-envelope"></i> info@zeezeekay.com
+=======
+                                <i class="bi bi-geo-alt"></i> #13 Commerce Street, Freetown<br>
+                                <i class="bi bi-envelope"></i> support@zeekay.com
+>>>>>>> e93998f4215d06f7f5dd36a803fd172ee105ec1a
                             </div>
                         </div>
                         <div class="col-md-6 text-md-end">
@@ -580,7 +585,11 @@ $deadlineFormatted = $deadline->format('F d, Y');
                 <div class="invoice-footer-text">
                     <p class="mb-0">
                         <i class="bi bi-check-circle text-success"></i> 
+<<<<<<< HEAD
                         Thank you for shopping with Zeekay!
+=======
+                        Thank you for shopping with Zeekay Store!
+>>>>>>> e93998f4215d06f7f5dd36a803fd172ee105ec1a
                     </p>
                     <small>This is a system-generated invoice.</small>
                 </div>

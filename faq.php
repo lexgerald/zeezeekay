@@ -295,12 +295,20 @@ require_once 'includes/navbar.php';
     <!-- Still Have Questions -->
     <div class="row mt-5">
         <div class="col-12">
+<<<<<<< HEAD
             <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #667eea, #213bce);">
+=======
+            <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+>>>>>>> e93998f4215d06f7f5dd36a803fd172ee105ec1a
                 <div class="card-body p-5 text-center text-white">
                     <h3 class="fw-bold"><i class="bi bi-chat-dots"></i> Still Have Questions?</h3>
                     <p class="mb-4">We're here to help! Contact our support team for personalized assistance.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
+<<<<<<< HEAD
                         <a href="mailto:info@zeezeekay.com" class="btn btn-light">
+=======
+                        <a href="mailto:support@zeezeekay.com" class="btn btn-light">
+>>>>>>> e93998f4215d06f7f5dd36a803fd172ee105ec1a
                             <i class="bi bi-envelope"></i> Email Us
                         </a>
                         <a href="tel:+23299999849" class="btn btn-outline-light">
@@ -394,7 +402,11 @@ require_once 'includes/navbar.php';
 }
 
 .filter-btn.active {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #768cee, #3055dd);
+=======
+    background: linear-gradient(135deg, #667eea, #764ba2);
+>>>>>>> e93998f4215d06f7f5dd36a803fd172ee105ec1a
     border-color: #667eea;
     color: white;
 }
