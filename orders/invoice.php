@@ -67,12 +67,20 @@ $deadlineFormatted = $deadline->format('F d, Y');
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
     
     <style>
-        /* Print Styles */
+        /* Print Styles - Compact Version */
         @media print {
+            /* Page setup */
+            @page {
+                size: A4;
+                margin: 8mm 10mm;
+            }
+            
             body {
                 background: white !important;
                 padding: 0 !important;
                 margin: 0 !important;
+                font-size: 10pt !important;
+                line-height: 1.4 !important;
             }
             
             .no-print {
@@ -88,6 +96,12 @@ $deadlineFormatted = $deadline->format('F d, Y');
             .card {
                 border: none !important;
                 box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            .card-body {
+                padding: 10px 0 !important;
             }
             
             .card-header {
@@ -95,11 +109,20 @@ $deadlineFormatted = $deadline->format('F d, Y');
                 color: white !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                padding: 8px 15px !important;
+                border-radius: 4px 4px 0 0 !important;
+            }
+            
+            .card-header h4 {
+                font-size: 14pt !important;
+                margin: 0 !important;
             }
             
             .badge {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                font-size: 8pt !important;
+                padding: 2px 8px !important;
             }
             
             .bg-success {
@@ -120,36 +143,177 @@ $deadlineFormatted = $deadline->format('F d, Y');
                 print-color-adjust: exact !important;
             }
             
+            /* Compact header */
+            .invoice-header {
+                border-bottom: 2px solid #0d6efd !important;
+                padding-bottom: 8px !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .invoice-header .company-name {
+                font-size: 16pt !important;
+                font-weight: 700 !important;
+                color: #0d6efd !important;
+            }
+            
+            .invoice-header .invoice-title {
+                font-size: 12pt !important;
+                font-weight: 600 !important;
+                color: #6c757d !important;
+            }
+            
+            .invoice-header .text-muted {
+                font-size: 8pt !important;
+            }
+            
+            /* Compact details */
+            .invoice-details {
+                background: #f8f9fa !important;
+                padding: 8px 12px !important;
+                border-radius: 4px !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .invoice-details h6 {
+                font-size: 9pt !important;
+                font-weight: 700 !important;
+                margin-bottom: 2px !important;
+            }
+            
+            .invoice-details p {
+                font-size: 8.5pt !important;
+                margin: 0 !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Compact table */
+            .table {
+                font-size: 8.5pt !important;
+                margin-bottom: 5px !important;
+            }
+            
+            .table th {
+                font-size: 8.5pt !important;
+                padding: 3px 6px !important;
+                background-color: #e9ecef !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .table td {
+                padding: 3px 6px !important;
+                font-size: 8.5pt !important;
+            }
+            
             .table-striped tbody tr:nth-of-type(odd) {
                 background-color: #f8f9fa !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
             
-            .invoice-footer {
-                margin-top: 50px;
-                border-top: 2px solid #dee2e6;
-                padding-top: 20px;
-                text-align: center;
-                font-size: 0.9rem;
-                color: #6c757d;
+            .table tfoot th {
+                font-size: 8.5pt !important;
+                padding: 3px 6px !important;
             }
             
-            /* Hide navbar and footer when printing */
-            .navbar, footer, .no-print {
+            .table tfoot .table-primary {
+                background-color: #0d6efd !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .table tfoot .table-primary th {
+                color: white !important;
+            }
+            
+            /* Compact collection notice */
+            .collection-notice {
+                background-color: #fff3cd !important;
+                border-left: 3px solid #ffc107 !important;
+                padding: 6px 12px !important;
+                border-radius: 4px !important;
+                margin: 8px 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .collection-notice i {
+                font-size: 12pt !important;
+                color: #ffc107 !important;
+            }
+            
+            .collection-notice .notice-title {
+                font-weight: 700 !important;
+                color: #856404 !important;
+                font-size: 9pt !important;
+            }
+            
+            .collection-notice .notice-text {
+                color: #856404 !important;
+                font-size: 8pt !important;
+                margin: 0 !important;
+                line-height: 1.3 !important;
+            }
+            
+            .collection-notice small {
+                font-size: 7.5pt !important;
+            }
+            
+            /* Hide navbar, footer, and action buttons */
+            .navbar, footer, .no-print, .btn {
                 display: none !important;
             }
             
-            /* Ensure card body padding is preserved */
-            .card-body {
-                padding: 2rem !important;
+            .watermark {
+                display: none !important;
             }
             
-            .collection-notice {
-                background-color: #fff3cd !important;
-                border-color: #ffc107 !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+            /* Invoice footer */
+            .invoice-footer-text {
+                margin-top: 10px !important;
+                padding-top: 8px !important;
+                border-top: 1px solid #dee2e6 !important;
+                text-align: center !important;
+                font-size: 7.5pt !important;
+                color: #6c757d !important;
+            }
+            
+            .invoice-footer-text p {
+                margin: 0 !important;
+                font-size: 8pt !important;
+            }
+            
+            .invoice-footer-text small {
+                font-size: 7pt !important;
+            }
+            
+            .status-badge {
+                font-size: 8pt !important;
+                padding: 2px 10px !important;
+            }
+            
+            /* Ensure everything fits on one page */
+            .card-body {
+                padding: 5px 0 !important;
+            }
+            
+            /* Force page break control */
+            .page-break {
+                page-break-after: avoid;
+            }
+            
+            /* Reduce margins on print */
+            .container {
+                padding: 0 !important;
+            }
+            
+            .row {
+                margin: 0 !important;
+            }
+            
+            .col-md-6 {
+                padding: 0 5px !important;
             }
         }
         
@@ -184,6 +348,15 @@ $deadlineFormatted = $deadline->format('F d, Y');
             margin-bottom: 30px;
         }
         
+        .invoice-details h6 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        .invoice-details p {
+            margin-bottom: 0;
+        }
+        
         .invoice-details table {
             margin-bottom: 0;
         }
@@ -191,27 +364,6 @@ $deadlineFormatted = $deadline->format('F d, Y');
         .invoice-details table td {
             padding: 5px 10px;
             border: none;
-        }
-        
-        .invoice-total {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .invoice-total .total-amount {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0d6efd;
-        }
-        
-        .invoice-footer-text {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #dee2e6;
-            text-align: center;
-            color: #6c757d;
         }
         
         .status-badge {
@@ -278,7 +430,6 @@ $deadlineFormatted = $deadline->format('F d, Y');
     <div class="watermark">ZEKAY STORE</div>
     
     <?php if(!isset($_GET['print'])): ?>
-        <!-- Only show navbar when not printing -->
         <?php require_once '../includes/navbar.php'; ?>
     <?php endif; ?>
     
@@ -309,16 +460,14 @@ $deadlineFormatted = $deadline->format('F d, Y');
                             <div class="company-name">Zeekay Store</div>
                             <div class="text-muted">
                                 <i class="bi bi-geo-alt"></i> #13 Commerce Street, Freetown<br>
-                                <i class="bi bi-envelope"></i> support@zeekay.com<br>
-                                <i class="bi bi-phone"></i> +1 (555) 123-4567
+                                <i class="bi bi-envelope"></i> support@zeekay.com
                             </div>
                         </div>
                         <div class="col-md-6 text-md-end">
                             <div class="invoice-title">INVOICE</div>
                             <div class="text-muted">
                                 <strong>Invoice #:</strong> <?php echo str_pad($order['id'], 6, '0', STR_PAD_LEFT); ?><br>
-                                <strong>Date:</strong> <?php echo date('F d, Y', strtotime($order['created_at'])); ?><br>
-                                <strong>Time:</strong> <?php echo date('h:i A', strtotime($order['created_at'])); ?>
+                                <strong>Date:</strong> <?php echo date('M d, Y', strtotime($order['created_at'])); ?>
                             </div>
                         </div>
                     </div>
@@ -329,16 +478,15 @@ $deadlineFormatted = $deadline->format('F d, Y');
                     <div class="row">
                         <div class="col-md-6">
                             <h6><i class="bi bi-person"></i> Bill To:</h6>
-                            <p class="mb-0">
+                            <p>
                                 <strong><?php echo htmlspecialchars($order['user_name']); ?></strong><br>
-                                <?php echo htmlspecialchars($order['user_email']); ?><br>
                                 <?php echo htmlspecialchars($order['shipping_address']); ?><br>
                                 <?php echo htmlspecialchars($order['shipping_city'] . ', ' . $order['shipping_zip']); ?>
                             </p>
                         </div>
                         <div class="col-md-6">
                             <h6><i class="bi bi-info-circle"></i> Order Details:</h6>
-                            <p class="mb-0">
+                            <p>
                                 <strong>Order ID:</strong> #<?php echo $order['id']; ?><br>
                                 <strong>Status:</strong> 
                                 <span class="badge <?php 
@@ -346,8 +494,7 @@ $deadlineFormatted = $deadline->format('F d, Y');
                                         ($order['status'] === 'pending' ? 'bg-warning' : 'bg-danger'); 
                                 ?>">
                                     <?php echo ucfirst($order['status']); ?>
-                                </span><br>
-                                <strong>Transaction ID:</strong> <?php echo htmlspecialchars($order['transaction_id'] ?? 'N/A'); ?>
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -359,11 +506,11 @@ $deadlineFormatted = $deadline->format('F d, Y');
                     <table class="table table-striped table-hover">
                         <thead class="table-light">
                             <tr>
-                                <th>#</th>
-                                <th>Product</th>
-                                <th class="text-center">Quantity</th>
-                                <th class="text-end">Price</th>
-                                <th class="text-end">Subtotal</th>
+                                <th style="width: 5%;">#</th>
+                                <th style="width: 45%;">Product</th>
+                                <th style="width: 15%;" class="text-center">Qty</th>
+                                <th style="width: 17%;" class="text-end">Price</th>
+                                <th style="width: 18%;" class="text-end">Subtotal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -392,7 +539,7 @@ $deadlineFormatted = $deadline->format('F d, Y');
                                 <th class="text-end">Le 0.00</th>
                             </tr>
                             <tr class="table-primary">
-                                <th colspan="4" class="text-end" style="font-size: 1.1rem;">Total Amount:</th>
+                                <th colspan="4" class="text-end" style="font-size: 1.1rem;">Total:</th>
                                 <th class="text-end" style="font-size: 1.1rem;">
                                     <strong>Le <?php echo number_format($order['total_amount'], 2); ?></strong>
                                 </th>
@@ -407,11 +554,9 @@ $deadlineFormatted = $deadline->format('F d, Y');
                     <div class="notice-content">
                         <div class="notice-title">⚠️ Collection Notice</div>
                         <p class="notice-text">
-                            Please collect your goods within <strong>seven (7) days</strong> from the order date.
+                            Please collect your goods within <strong>7 days</strong> from order date.
                             <br>
-                            <strong>Collection Deadline:</strong> <span class="deadline-date"><?php echo $deadlineFormatted; ?></span>
-                            <br>
-                            <small>If you fail to collect within this period, your order may be subject to cancellation.</small>
+                            <strong>Deadline:</strong> <span class="deadline-date"><?php echo $deadlineFormatted; ?></span>
                         </p>
                     </div>
                 </div>
@@ -425,19 +570,24 @@ $deadlineFormatted = $deadline->format('F d, Y');
                         <button onclick="window.print()" class="btn btn-primary">
                             <i class="bi bi-printer"></i> Print Invoice
                         </button>
-                        <button onclick="window.print()" class="btn btn-success">
-                            <i class="bi bi-download"></i> Download PDF
-                        </button>
                         <a href="<?php echo BASE_URL; ?>index.php" class="btn btn-outline-secondary">
                             <i class="bi bi-house"></i> Home
                         </a>
                     </div>
                 </div>
+                
+                <!-- Invoice Footer -->
+                <div class="invoice-footer-text">
+                    <p class="mb-0">
+                        <i class="bi bi-check-circle text-success"></i> 
+                        Thank you for shopping with Zeekay Store!
+                    </p>
+                    <small>This is a system-generated invoice.</small>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Only show footer when not printing -->
     <?php if(!isset($_GET['print'])): ?>
         <?php require_once '../includes/footer.php'; ?>
     <?php else: ?>
@@ -447,16 +597,13 @@ $deadlineFormatted = $deadline->format('F d, Y');
     <?php endif; ?>
     
     <script>
-        // Auto-print if print parameter is set
         <?php if(isset($_GET['print'])): ?>
             window.onload = function() {
                 window.print();
             };
         <?php endif; ?>
         
-        // Handle print button click with better UX
         document.querySelector('[onclick="window.print()"]')?.addEventListener('click', function(e) {
-            // Optional: Show loading state
             this.innerHTML = '<i class="bi bi-hourglass-split"></i> Preparing...';
             setTimeout(() => {
                 this.innerHTML = '<i class="bi bi-printer"></i> Print Invoice';

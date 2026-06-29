@@ -1,9 +1,12 @@
 <?php
-// checkout/place-order.php - Process order and show success
+// checkout/place-order.php - Process order
 require_once '../config/config.php';
 require_once '../config/db.php';
 
-// No need to start session again - it's already started in config/config.php
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -23,6 +26,8 @@ $total = floatval($_POST['total'] ?? 0);
 $address = trim($_POST['address'] ?? '');
 $city = trim($_POST['city'] ?? '');
 $phone = trim($_POST['zip'] ?? '');
+$paymentMethod = $_POST['payment_method'] ?? 'manual';
+$reference = $_POST['reference'] ?? '';
 
 // Validate inputs
 if ($total <= 0) {
@@ -47,6 +52,10 @@ if (empty($cart)) {
     header("Location: " . BASE_URL . "cart/cart.php");
     exit;
 }
+
+// Check if this is an AJAX request (for Orange Money)
+$isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+          strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
 
 try {
     // Begin transaction
@@ -88,11 +97,12 @@ try {
     // Save payment record
     $stmt = $db->prepare("INSERT INTO payments (order_id, transaction_id, status, payload) VALUES (?, ?, 'pending', ?)");
     $stmt->execute([$orderId, $transactionId, json_encode([
-        'type' => 'manual',
+        'type' => $paymentMethod,
         'order_id' => $orderId,
         'phone' => $phone,
         'address' => $address,
-        'city' => $city
+        'city' => $city,
+        'reference' => $reference
     ])]);
     
     // Clear cart
@@ -101,155 +111,35 @@ try {
     // Commit transaction
     $db->commit();
     
-    // Show success page
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Order Placed - Zeekay Store</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/zee_logo.png" type="image/x-icon">
-        <style>
-            body {
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin: 0;
-                padding: 20px;
-            }
-            .success-container {
-                background: white;
-                border-radius: 20px;
-                padding: 50px;
-                text-align: center;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-                max-width: 500px;
-                width: 100%;
-                animation: slideUp 0.6s ease;
-            }
-            @keyframes slideUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            .success-icon {
-                font-size: 5rem;
-                color: #28a745;
-                animation: pulse 1.5s ease-in-out infinite;
-            }
-            @keyframes pulse {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-            }
-            .order-number {
-                background: #f8f9fa;
-                padding: 10px 20px;
-                border-radius: 10px;
-                display: inline-block;
-                margin: 10px 0;
-                font-size: 1.1rem;
-            }
-            .order-number strong {
-                color: #333;
-            }
-            .btn-home {
-                background: linear-gradient(135deg, #667eea, #764ba2);
-                color: white;
-                border: none;
-                padding: 12px 40px;
-                border-radius: 50px;
-                text-decoration: none;
-                display: inline-block;
-                transition: all 0.3s ease;
-                font-weight: 600;
-            }
-            .btn-home:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-                color: white;
-            }
-            .btn-orders {
-                color: #667eea;
-                text-decoration: none;
-                font-weight: 500;
-                transition: color 0.3s ease;
-            }
-            .btn-orders:hover {
-                color: #764ba2;
-                text-decoration: underline;
-            }
-            .alert-info {
-                background: #e7f3ff;
-                border-color: #b6d4fe;
-                color: #084298;
-                border-radius: 10px;
-            }
-            .alert-info i {
-                font-size: 1.2rem;
-                margin-right: 8px;
-            }
-            @media (max-width: 480px) {
-                .success-container {
-                    padding: 30px 20px;
-                }
-                .success-icon {
-                    font-size: 4rem;
-                }
-                h2 {
-                    font-size: 1.5rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="success-container">
-            <div class="success-icon">
-                <i class="bi bi-check-circle-fill"></i>
-            </div>
-            <h2 class="mt-3 fw-bold text-success">Order Placed Successfully!</h2>
-            <p class="text-muted">Thank you for your order. We will contact you shortly.</p>
-            
-            <div class="order-number">
-                <strong>Order #:</strong> <?php echo str_pad($orderId, 6, '0', STR_PAD_LEFT); ?>
-            </div>
-            
-            <div class="alert alert-info mt-3">
-                <i class="bi bi-clock-history"></i> 
-                We will contact you within 24 hours to confirm your order.
-            </div>
-            
-            <div class="mt-4">
-                <a href="<?php echo BASE_URL; ?>index.php" class="btn-home">
-                    <i class="bi bi-house"></i> Return to Home
-                </a>
-            </div>
-            
-            <div class="mt-3">
-                <a href="<?php echo BASE_URL; ?>orders/orders.php" class="btn-orders">
-                    <i class="bi bi-box-seam"></i> View My Orders
-                </a>
-            </div>
-        </div>
-    </body>
-    </html>
-    <?php
+    // If AJAX request (Orange Money), return JSON
+    if ($isAjax) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => true,
+            'order_id' => $orderId,
+            'message' => 'Order placed successfully'
+        ]);
+        exit;
+    }
+    
+    // Regular form submission - redirect to success
+    header("Location: " . BASE_URL . "checkout/order-success.php?order_id=" . $orderId);
     exit;
     
 } catch (Exception $e) {
     // Rollback transaction on error
     $db->rollBack();
     error_log("Order placement error: " . $e->getMessage());
+    
+    if ($isAjax) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]);
+        exit;
+    }
+    
     header("Location: " . BASE_URL . "checkout/checkout.php?error=" . urlencode($e->getMessage()));
     exit;
 }

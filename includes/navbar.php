@@ -29,6 +29,9 @@ if (isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="<?php echo BASE_URL; ?>about.php">About Us</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo BASE_URL; ?>faq.php">FAQ</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL; ?>products/index.php">Products</a>
                 </li>
                 <li class="nav-item">

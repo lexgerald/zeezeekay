@@ -61,7 +61,7 @@ if ($loginSuccess) {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #17b8d8 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
         }
@@ -94,7 +94,7 @@ if ($loginSuccess) {
             width: 100px;
             height: 100px;
             margin: 0 auto 25px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea, #17b8d8);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -108,7 +108,7 @@ if ($loginSuccess) {
             position: absolute;
             inset: -5px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea, #17b8d8);
             opacity: 0.3;
             animation: ripple 2s ease-out infinite;
         }
@@ -153,7 +153,7 @@ if ($loginSuccess) {
         }
         
         .user-name {
-            color: #764ba2;
+            color: #2131e6;
             font-weight: 600;
         }
         
@@ -165,7 +165,7 @@ if ($loginSuccess) {
             width: 3rem;
             height: 3rem;
             border-width: 0.25rem;
-            color: #764ba2;
+            color: #17b8d8;
         }
         
         .progress-container {
@@ -182,7 +182,7 @@ if ($loginSuccess) {
         .progress-bar {
             height: 100%;
             border-radius: 10px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #667eea, #17b8d8);
             width: 0%;
             transition: width 0.3s ease;
             position: relative;
@@ -219,7 +219,7 @@ if ($loginSuccess) {
         }
         
         .loading-text i {
-            color: #764ba2;
+            color: #17b8d8;
         }
         
         .dots {
@@ -424,7 +424,7 @@ if ($loginSuccess) {
         .auth-card .card-header {
             border-bottom: none;
             padding: 1.5rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #17b8d8 100%);
         }
         .auth-card .card-body {
             padding: 2rem;
@@ -443,7 +443,7 @@ if ($loginSuccess) {
             border-radius: 8px;
             padding: 0.75rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #17b8d8 100%);
             border: none;
         }
         .auth-card .btn-primary:hover {
