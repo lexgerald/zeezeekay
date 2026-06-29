@@ -54,7 +54,7 @@ if ($orderId > 0 && isset($_SESSION['user_id'])) {
                         </div>
                         
                         <div class="alert alert-secondary text-start">
-                            <strong>Shipping Address:</strong><br>
+                            <strong>Delivery Address:</strong><br>
                             <?php echo htmlspecialchars($order['shipping_address']); ?><br>
                             <?php echo htmlspecialchars($order['shipping_city'] . ', ' . $order['shipping_zip']); ?>
                         </div>
